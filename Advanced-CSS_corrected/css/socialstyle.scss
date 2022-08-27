@@ -1,0 +1,105 @@
+@import "./extend";
+
+
+body{
+    background-color: $color_gray;
+}
+
+
+.blog{
+    background-color: #e17b77;
+}
+.facebook{
+    background-color: #3b5998;
+}
+.twitter{
+    background-color: #00aced;
+    width: 40opx;
+}
+.github{
+    background-color: #333;
+}
+.linkedin{
+    background-color: #007bb6;
+}
+
+
+
+a{
+    color: white;
+}
+img{
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+
+.blog{
+    @include flex();
+    @include position();
+    bottom: 300px;
+}
+.blog:hover{
+    @include hover_social();
+}
+
+.twitter{
+    @include flex();
+    @include position();
+    bottom: 250px;
+}
+.twitter:hover{
+    @include hover_social();
+}
+
+.linkedin{
+    @include flex();
+    @include position();
+    bottom: 200px;
+
+}
+
+.linkedin:hover{
+    @include hover_social();
+}
+
+.facebook{
+    @include flex();
+    @include position();
+    bottom: 150px;
+}
+.facebook:hover{
+    @include hover_social();
+}
+.github{
+    @include flex();
+    @include position();
+    bottom: 100px;
+
+}
+.github:hover{
+    @include hover_social();
+}
+
+
+.blog::after{
+    content: "Check out my blog";
+    color: white;
+}
+.twitter::after{
+    content: "Follow me on Twitter";
+    color: white;
+}
+.linkedin::after{
+    content: "Connect on Linkedin";
+    color: white;
+}
+.facebook::after{
+    content: "Like my Facebook page";
+    color: white;
+}
+.github::after{
+    content: "See projects on Github";
+    color: white;
+}
